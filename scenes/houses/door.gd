@@ -13,9 +13,9 @@ func _ready() -> void:
 func on_interactable_activated() -> void:
 	animated_sprite_2d.play("open_door")
 	collision_layer = 2
-	print("activated")
+	#print("activated")
 	
 func on_interactable_deactivated() -> void:
 	animated_sprite_2d.play("close_door")
 	collision_layer = 1
-	print("deactivated")
+	#print("deactivated")

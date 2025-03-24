@@ -41,12 +41,14 @@ func _on_physics_process(_delta : float) -> void:
 	var velocity: Vector2 = target_direction * speed
 	
 	if navigation_agent_2d.avoidance_enabled:
+		animated_sprite_2d.flip_h = velocity.x < 0
 		navigation_agent_2d.velocity = velocity
 	else:
 		character.velocity = velocity
 		character.move_and_slide()
 
 func on_safe_velocity_computed(safe_velocity: Vector2) -> void:
+	animated_sprite_2d.flip_h = safe_velocity.x < 0
 	character.velocity = safe_velocity
 	character.move_and_slide()
 

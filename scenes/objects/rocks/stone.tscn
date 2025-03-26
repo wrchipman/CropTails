@@ -11,10 +11,12 @@ region = Rect2(114, 18, 10, 8)
 radius = 4.12311
 
 [node name="Stone" type="Sprite2D"]
+y_sort_enabled = true
 position = Vector2(0, -2)
 texture = SubResource("AtlasTexture_oca81")
 
 [node name="CollectableComponent" parent="." instance=ExtResource("2_oca81")]
+collectable_name = "stone"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent"]
 shape = SubResource("CircleShape2D_k7uky")

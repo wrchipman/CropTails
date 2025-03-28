@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsvxl0ufidu42"]
+
+[ext_resource type="Script" uid="uid://dxa3jteu8akua" path="res://scenes/components/day_night_cycle_component.gd" id="1_76coa"]
+
+[sub_resource type="Gradient" id="Gradient_76coa"]
+offsets = PackedFloat32Array(0, 0.0523691, 0.110973, 0.184539, 0.264339, 0.340399, 0.46384, 1)
+colors = PackedColorArray(0.18, 0.216, 0.72, 1, 0.19265, 0.228821, 0.708252, 1, 0.260208, 0.290766, 0.654065, 1, 0.302697, 0.378525, 0.567745, 1, 0.389224, 0.404045, 0.506784, 1, 0.758289, 0.758289, 0.758289, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_02hyl"]
+gradient = SubResource("Gradient_76coa")
+
+[node name="DayNightCycleComponent" type="CanvasModulate"]
+script = ExtResource("1_76coa")
+day_night_gradient_texture = SubResource("GradientTexture1D_02hyl")
